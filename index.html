@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    a:hover {
+      color: #1f6feb;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      height: 100vh;
+      background: url('my-photo.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
+
+    .projects {
+      background-color: #0d1117;
+      padding: 60px 0;
+    }
+
+    .projects .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      margin-bottom: 30px;
+    }
+
+    .projects .card-title {
+      color: #58a6ff;
+      font-size: 1.5rem;
+    }
+
+    .projects .card-text {
+      color: #c9d1d9;
+    }
+
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    h2.section-title {
+      color: #58a6ff;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .ds-ml{
+      color: white;
+    }
+
+    .skills {
+      background-color: #161b22;
+      padding: 50px 0;
+    }
+
+    .skills h2 {
+      color: #58a6ff;
+      margin-bottom: 40px;
+    }
+
+    .skills .skill-box {
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      color: #c9d1d9;
+      font-weight: 500;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .skills .row {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #0d1117;
+      border-top: 1px solid #30363d;
+      color: #8b949e;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm JHANSI</h1>
+      <p>Aspiring Full-Stack Developer | Data Scientist | AI Enthusiast</p>
+    </div>
+  </section>
+
+  <section class="projects container">
+    <h2 class="section-title">Web Development Projects</h2>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">SQL Visualizer</h5>
+        <p class="card-text">A web-based tool that visually demonstrates SQL JOIN operations. Includes animated JOIN logic for INNER, LEFT, RIGHT, and FULL JOINS. Built with HTML, CSS, JavaScript, and Flask.</p>
+        <video width="100%" height="auto" autoplay muted loop playsinline>
+          <source src="finaldbmsrec.mp4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+  
+        <a href="https://github.com/jhansi-0110/SQL-visualizer" target="_blank" class="btn btn-outline-light btn-sm github-btn mt-2">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Newsletter Website</h5>
+        <p class="card-text">A Flask-based web application where users can subscribe to a newsletter. Handles form validation, stores user data, and sends confirmation emails. Built using Flask, Bootstrap, and Python.</p>
+        
+        <a href="https://github.com/jhansi-0110/AI-newsletter" target="_blank" class="btn btn-outline-light btn-sm github-btn mt-2">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <h2 class="section-title">Python Projects</h2>
+
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Virtual Painter</h5>
+        <p class="card-text">Draw on screen using colored objects tracked by your webcam with OpenCV.</p>
+        <img src="virtual-painter-demo.png" alt="Virtual Painter Demo" class="img-fluid rounded mb-3" style="max-height: 300px; object-fit: cover;">
+        <a href="https://github.com/jhansi-0110/Virtual-painter" target="_blank" class="btn btn-outline-light btn-sm github-btn"><i class="fab fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Text-to-Speech Converter</h5>
+        <p class="card-text">A Python GUI app that converts text to speech using pyttsx3 library.</p>
+        <a href="https://github.com/jhansi-0110/Text-to-speech" target="_blank" class="btn btn-outline-light btn-sm github-btn"><i class="fab fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">To-Do List App</h5>
+        <p class="card-text">Simple task management desktop app built in Python using tkinter.</p>
+        <a href="https://github.com/jhansi-0110/To-Do-List" target="_blank" class="btn btn-outline-light btn-sm github-btn"><i class="fab fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <h2 class="section-title">DS & ML Projects</h2>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Heart Disease Prediction</h5>
+        <p class="card-text">ML model to predict the risk of heart disease based on health indicators.</p>
+        <a href="https://github.com/jhansi-0110/heart-disease-prediction" target="_blank" class="btn btn-outline-light btn-sm github-btn"><i class="fab fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Vandaluru Zoo Animal Data Visualization</h5>
+        <p class="card-text">Built using PyViz during our college contest Vashisht. Visualized complex animal data and secured 2nd prize.</p>
+        <a href="https://github.com/jhansi-0110/vashisht-pyviz-contest" target="_blank" class="btn btn-outline-light btn-sm github-btn"><i class="fab fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Mini-Projects from ZTM Bootcamp</h5>
+        <ul class="ds-ml">
+          <li>Predictive Modeling using Scikit-learn – Classification and regression on real datasets.</li>
+          <li>Data Cleaning & EDA – Data analysis with Pandas, NumPy, and Matplotlib.</li>
+          <li>Basic Web App using Flask – Form-based app using Python and HTML/CSS.</li>
+          <li>Portfolio Website – Built a static personal site using HTML/CSS.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container text-center">
+      <h2>Skills & Tools</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="skill-box">Python</div>
+          <div class="skill-box">Flask</div>
+          <div class="skill-box">HTML</div>
+          <div class="skill-box">CSS</div>
+          <div class="skill-box">JavaScript</div>
+          <div class="skill-box">Open CV</div>
+        </div>
+        <div class="col-md-6">
+          <div class="skill-box">NumPy</div>
+          <div class="skill-box">Pandas</div>
+          <div class="skill-box">Matplotlib</div>
+          <div class="skill-box">Scikit-learn</div>
+          <div class="skill-box">Git/GitHub</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 jhansi. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
